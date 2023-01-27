@@ -1,10 +1,15 @@
 .headerWrapper {
-  width: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: 100px auto 100px;
   padding: 15px;
+  box-sizing: border-box;
 }
 
 .headerTitle {
   text-align: center;
+}
+
+.headerClock {
+  text-align: right;
 }

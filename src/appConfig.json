@@ -1,5 +1,6 @@
 {
   "title": "Komplett bus times",
+  "results": 10,
   "selected": [
     {
       "stopCode": "7061043-01",

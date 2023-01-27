@@ -1,24 +1,43 @@
-.busStopWrapper {
-  border: 2px solid #2e2e2e;
-  margin: 20px;
+.timetable {
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  border-spacing: 0;
 }
 
-.busStopHeader {
-  background: #2e2e2e;
-  padding: 10px;
+th {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
 
-.busStopHeader h1 {
-  padding: 0;
-  margin: 0;
+th span {
+  display: table-row;
+  text-align: start;
 }
 
-.departureHeader {
-  display: grid;
-  grid-template-columns: 140px 140px auto;
-  padding: 10px;
+th.line {
+  width: 150px;
 }
 
-.timeslotWrapper {
-  padding: 10px;
+th.destination {
+  width: auto;
+}
+
+th.departure {
+  width: 150px;
+}
+
+th span:nth-child(even) {
+  font-size: 0.8em;
+}
+
+td {
+  color: var(--main-color);
+  padding: 15px;
+}
+
+tr:nth-child(even) {
+  background: #21262d;
 }

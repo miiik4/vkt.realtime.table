@@ -1,24 +1,22 @@
-import './Timeslot.css';
-
-import { Departures } from 'src/typings/stoptimes';
-import { getDateTime, readableTimeUntil } from 'src/utils/time';
+import { DepartureDetails } from 'src/typings/stoptimes';
+import { getTimeOfDate, readableTimeUntil } from 'src/utils/time';
 
 interface TimeslotProps {
-  departureDetails: Departures;
+  departureDetails: DepartureDetails;
 }
 
-const Timeslot = ({
-  departureDetails: { departureSchedule, departureRealtime, headingTextOverride },
-}: TimeslotProps) => {
-  const schedule = getDateTime(departureSchedule);
-  const realtime = readableTimeUntil(departureRealtime);
+const Timeslot = ({ departureDetails }: TimeslotProps) => {
+  const realtime = readableTimeUntil(departureDetails.departureRealtime);
+  const scheduled = getTimeOfDate(departureDetails.departureSchedule);
+
+  console.log(realtime, scheduled);
 
   return (
-    <div className="departureWrapper">
-      <h2 className="schedule">{schedule}</h2>
-      <h2 className="realtime">{realtime}</h2>
-      <h1>{headingTextOverride}</h1>
-    </div>
+    <tr>
+      <td>{departureDetails.lineName}</td>
+      <td>{departureDetails.headingTextOverride}</td>
+      <td>{realtime ?? scheduled}</td>
+    </tr>
   );
 };
 

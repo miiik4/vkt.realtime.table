@@ -1,4 +1,4 @@
-import { getDateTime } from 'src/utils/time';
+import { getTimeOfDate } from 'src/utils/time';
 import './Header.css';
 
 interface HeaderProps {
@@ -8,9 +8,9 @@ interface HeaderProps {
 const Header = ({ title }: HeaderProps) => {
   return (
     <div className="headerWrapper">
-      <h1>logo</h1>
-      <h1 className="headerTitle">{title}</h1>
-      <h1>{getDateTime(new Date().toString())}</h1>
+      <h2>logo</h2>
+      <h2 className="headerTitle">{title}</h2>
+      <h2 className="headerClock">{getTimeOfDate(new Date().toString())}</h2>
     </div>
   );
 };

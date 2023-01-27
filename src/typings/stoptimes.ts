@@ -1,3 +1,11 @@
+export interface DepartureDetails {
+  departureRealtime: string;
+  departureSchedule: string;
+  headingTextOverride: string;
+  realtimeId: string;
+  lineName: string;
+}
+
 export interface Departures {
   departureRealtime: string;
   departureSchedule: string;
@@ -5,7 +13,7 @@ export interface Departures {
   realtimeId: string;
 }
 
-interface BusLine {
+export interface BusLine {
   lineOperator: {
     operatorId: number;
     operatorSymbol: string;

@@ -7,14 +7,7 @@ import Timetable from './features/timetable/Timetable';
 const App = () => (
   <>
     <Header title={config.title} />
-    {config.selected.map((selected) => (
-      <Timetable
-        key={selected.stopCode}
-        stopCode={selected.stopCode}
-        lineName={selected.lineName}
-        directionCode={selected.directionCode}
-      />
-    ))}
+    <Timetable />
   </>
 );
 
