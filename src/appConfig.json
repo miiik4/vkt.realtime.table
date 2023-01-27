@@ -1,0 +1,15 @@
+{
+  "title": "Komplett bus times",
+  "selected": [
+    {
+      "stopCode": "7061043-01",
+      "lineName": "01",
+      "directionCode": "0"
+    },
+    {
+      "stopCode": "7060124",
+      "lineName": "011",
+      "directionCode": "1"
+    }
+  ]
+}

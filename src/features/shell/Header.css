@@ -1,0 +1,10 @@
+.headerWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  padding: 15px;
+}
+
+.headerTitle {
+  text-align: center;
+}

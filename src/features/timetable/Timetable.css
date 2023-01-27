@@ -1,0 +1,24 @@
+.busStopWrapper {
+  border: 2px solid #2e2e2e;
+  margin: 20px;
+}
+
+.busStopHeader {
+  background: #2e2e2e;
+  padding: 10px;
+}
+
+.busStopHeader h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.departureHeader {
+  display: grid;
+  grid-template-columns: 140px 140px auto;
+  padding: 10px;
+}
+
+.timeslotWrapper {
+  padding: 10px;
+}
