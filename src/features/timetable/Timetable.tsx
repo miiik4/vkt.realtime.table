@@ -8,7 +8,7 @@ import Timeslot from './components/Timeslot';
 
 const Timetable = () => {
   const { getStopTimes } = useTimetableApiHook();
-  const [timeslots, setTimeslots] = useState<any>([]);
+  const [timeslots, setTimeslots] = useState<DepartureDetails[]>([]);
 
   const getAllStopTimes = async () => {
     await getStopTimes()
@@ -18,6 +18,10 @@ const Timetable = () => {
 
   useEffect(() => {
     getAllStopTimes();
+    const interval = setInterval(() => {
+      getAllStopTimes();
+    }, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
