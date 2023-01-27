@@ -9,8 +9,6 @@ const Timeslot = ({ departureDetails }: TimeslotProps) => {
   const realtime = readableTimeUntil(departureDetails.departureRealtime);
   const scheduled = getTimeOfDate(departureDetails.departureSchedule);
 
-  console.log(realtime, scheduled);
-
   return (
     <tr>
       <td>{departureDetails.lineName}</td>

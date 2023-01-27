@@ -1,10 +1,10 @@
 import './Timetable.css';
-import config from '../../appConfig.json';
+import config from 'src/appConfig.json';
 
 import { useEffect, useState } from 'react';
+import { DepartureDetails } from 'src/typings/stoptimes';
 import useTimetableApiHook from './api/times';
 import Timeslot from './components/Timeslot';
-import { DepartureDetails } from 'src/typings/stoptimes';
 
 const Timetable = () => {
   const { getStopTimes } = useTimetableApiHook();
@@ -40,7 +40,7 @@ const Timetable = () => {
       </thead>
       <tbody>
         {timeslots.map(
-          (departureDetails: DepartureDetails, index) =>
+          (departureDetails: DepartureDetails, index: number) =>
             index < config.results && (
               <Timeslot key={departureDetails.realtimeId} departureDetails={departureDetails} />
             )

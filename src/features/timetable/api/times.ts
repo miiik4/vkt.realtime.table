@@ -1,4 +1,4 @@
-import config from '../../../appConfig.json';
+import config from 'src/appConfig.json';
 
 import { DepartureDetails, Stoptimes } from 'src/typings/stoptimes';
 
