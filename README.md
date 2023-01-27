@@ -1,6 +1,6 @@
 # VKT Realtime Table
 
-This small application was made to display VKT realtime departures from selected bus stops.
+This small application was created to display VKT realtime departures from selected bus stops.
 
 ![preview image](https://github.com/miiik4/vkt.realtime.table/blob/main/assets/preview.png?raw=true)
 
