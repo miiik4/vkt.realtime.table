@@ -2,9 +2,6 @@ import config from 'src/appConfig.json';
 
 import { DepartureDetails, Stoptimes } from 'src/typings/stoptimes';
 
-const VKT_URL =
-  'https://sanntid.vkt.no/api/web/v1/schedule/departures?citySymbol=NO_VESTFOLD&fullSchedule=false&stopGroupDepartures=true';
-
 const useTimetableApiHook = () => {
   const getStopTimes = async () => {
     const departures: DepartureDetails[] = [];
@@ -12,7 +9,7 @@ const useTimetableApiHook = () => {
     for (let i = 0; i < config.selected.length; i++) {
       const selected = config.selected[i];
 
-      await fetch(`${VKT_URL}&stopCode=${selected.stopCode}`)
+      await fetch(`${config.api}&stopCode=${selected.stopCode}`)
         .then((response) => response.json())
         .then((stoptimes: Stoptimes) => {
           const selectedStop = stoptimes.stops.find((stop) => stop.stopCode === selected.stopCode);
