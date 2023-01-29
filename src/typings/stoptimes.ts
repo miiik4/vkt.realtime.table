@@ -6,7 +6,7 @@ export interface DepartureDetails {
   lineName: string;
 }
 
-export interface Departures {
+export interface Departure {
   departureRealtime: string;
   departureSchedule: string;
   headingTextOverride: string;
@@ -24,7 +24,7 @@ export interface BusLine {
   lineDirectionName: string;
   directionCode: string;
   vehicleType: string;
-  departures: Departures[];
+  departures: Departure[];
 }
 
 export interface BusStop {

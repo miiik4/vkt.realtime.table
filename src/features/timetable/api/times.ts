@@ -1,6 +1,7 @@
 import config from 'src/appConfig.json';
 
 import { DepartureDetails, Stoptimes } from 'src/typings/stoptimes';
+import { sortDeparturesByAsc } from 'src/utils/sorting';
 
 const useTimetableApiHook = () => {
   const getStopTimes = async () => {
@@ -28,7 +29,7 @@ const useTimetableApiHook = () => {
         .catch((e) => console.warn('Unable to fetch stoptimes: ', e));
     }
 
-    return departures;
+    return departures.sort(sortDeparturesByAsc);
   };
 
   return { getStopTimes };
