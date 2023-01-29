@@ -8,7 +8,7 @@ interface HeaderProps {
 const Header = ({ title }: HeaderProps) => {
   return (
     <div className="headerWrapper">
-      <h2>logo</h2>
+      <img src="bus.webp" alt="bus logo" />
       <h2 className="headerTitle">{title}</h2>
       <h2 className="headerClock">{getTimeOfDate(new Date().toString())}</h2>
     </div>
