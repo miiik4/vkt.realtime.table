@@ -8,7 +8,7 @@
 
 .headerWrapper img {
   height: 25px;
-  filter: invert(89%) sepia(52%) saturate(4158%) hue-rotate(334deg) brightness(103%) contrast(107%);
+  filter: invert(89%) sepia(52%) saturate(4158%) hue-rotate(334deg) brightness(100%) contrast(107%);
   margin: auto 0 auto 0;
 }
 
