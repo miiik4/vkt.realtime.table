@@ -20,7 +20,7 @@ const Timetable = () => {
     getAllStopTimes();
     const interval = setInterval(() => {
       getAllStopTimes();
-    }, 30000);
+    }, config.updateInterval);
     return () => clearInterval(interval);
   }, []);
 
@@ -46,7 +46,10 @@ const Timetable = () => {
         {timeslots.map(
           (departureDetails: DepartureDetails, index: number) =>
             index < config.results && (
-              <Timeslot key={departureDetails.realtimeId} departureDetails={departureDetails} />
+              <Timeslot
+                key={departureDetails.departureSchedule + departureDetails.headingTextOverride}
+                departureDetails={departureDetails}
+              />
             )
         )}
       </tbody>

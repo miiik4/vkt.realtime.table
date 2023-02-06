@@ -1,16 +1,24 @@
-import { getTimeOfDate } from 'src/utils/time';
 import './Header.css';
+import config from 'src/appConfig.json';
 
-interface HeaderProps {
-  title: string;
-}
+import { useEffect, useState } from 'react';
+import { getTimeOfDate } from 'src/utils/time';
 
-const Header = ({ title }: HeaderProps) => {
+const Header = () => {
+  const [clock, setClock] = useState(getTimeOfDate());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setClock(getTimeOfDate());
+    }, config.updateInterval);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="headerWrapper">
       <img src="bus.webp" alt="bus logo" />
-      <h2 className="headerTitle">{title}</h2>
-      <h2 className="headerClock">{getTimeOfDate(new Date().toString())}</h2>
+      <h2 className="headerTitle">{config.title}</h2>
+      <h2 className="headerClock">{clock}</h2>
     </div>
   );
 };
