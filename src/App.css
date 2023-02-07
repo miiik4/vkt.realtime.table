@@ -2,6 +2,11 @@
   --main-color: #ffe81a;
 }
 
+html {
+  --font-size: 100%;
+  --display-settings: hidden;
+}
+
 html,
 body {
   padding: 0;
@@ -10,6 +15,7 @@ body {
   font-weight: 400;
   background: black;
   color: var(--main-color);
+  font-size: var(--font-size);
 }
 
 h1,

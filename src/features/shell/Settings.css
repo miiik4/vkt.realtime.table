@@ -1,0 +1,23 @@
+.controlsWrapper {
+  visibility: var(--display-settings);
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80px;
+  height: 40px;
+  border-radius: 6px;
+  margin: 15px;
+  right: 0;
+  bottom: 0;
+  background: var(--main-color);
+  color: #21262d;
+}
+
+.controlsWrapper span {
+  font-size: 15px !important;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}

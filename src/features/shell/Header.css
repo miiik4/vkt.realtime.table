@@ -1,7 +1,6 @@
 .headerWrapper {
-  width: 100vw;
   display: grid;
-  grid-template-columns: 100px auto 100px;
+  grid-template-columns: 1fr auto 1fr;
   padding: 15px;
   box-sizing: border-box;
 }
@@ -10,6 +9,7 @@
   height: 25px;
   filter: invert(89%) sepia(52%) saturate(4158%) hue-rotate(334deg) brightness(100%) contrast(107%);
   margin: auto 0 auto 0;
+  cursor: pointer;
 }
 
 .headerTitle {
