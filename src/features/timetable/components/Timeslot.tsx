@@ -7,7 +7,7 @@ interface TimeslotProps {
 
 const Timeslot = ({ departureDetails }: TimeslotProps) => {
   const realtime = readableTimeUntil(departureDetails.departureRealtime);
-  const scheduled = getTimeOfDate(departureDetails.departureSchedule);
+  const scheduled = readableTimeUntil(departureDetails.departureSchedule);
 
   return (
     <tr>
