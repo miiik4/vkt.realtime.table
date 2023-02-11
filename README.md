@@ -6,6 +6,6 @@ This small application was created to display VKT realtime departures from selec
 
 ### How to setup the application
 
-1. Update the `appConfig.json` file with the selected busstops and lines. You can find the required details here: https://sanntid.vkt.no/
-2. Build the application using `npm run build`
-3. Upload build files to preferred hosting and enjoy 🙌
+1. Update the `appConfig.json` file with your own title and the selected busstops and lines. You can find the required details here: https://sanntid.vkt.no/
+2. Install dependencies with `npm install` and build the application using `npm run build`
+3. Upload build files from `dist` folder to preferred hosting and enjoy 🙌
