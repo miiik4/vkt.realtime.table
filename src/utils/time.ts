@@ -4,7 +4,7 @@ export const readableTimeUntil = (dateString: string) => {
     const diff = date.getTime() - new Date().getTime();
     const minutes = Math.round(diff / 60000);
     if (minutes > 120) return getTimeOfDate(date.toString());
-    if (minutes > 60) return `${(minutes / 60).toFixed(1)} timer`;
+    if (minutes > 60) return `${Math.trunc(minutes / 60)} t ${minutes - 60} min`;
     if (minutes < 1) return `Nå`;
     return `${minutes} min`;
   }

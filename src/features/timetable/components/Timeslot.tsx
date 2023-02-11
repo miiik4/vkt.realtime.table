@@ -1,5 +1,5 @@
 import { DepartureDetails } from 'src/typings/stoptimes';
-import { getTimeOfDate, readableTimeUntil } from 'src/utils/time';
+import { readableTimeUntil } from 'src/utils/time';
 
 interface TimeslotProps {
   departureDetails: DepartureDetails;
