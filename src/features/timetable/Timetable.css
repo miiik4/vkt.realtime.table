@@ -6,6 +6,11 @@
   border-spacing: 0;
 }
 
+.timetable img {
+  height: 1em;
+  vertical-align: middle;
+}
+
 th {
   padding-left: 15px;
   padding-right: 15px;
@@ -27,6 +32,11 @@ th.destination {
 
 th.departure {
   width: 150px;
+}
+
+th.icon {
+  width: 0;
+  padding: 0;
 }
 
 th span:nth-child(even) {

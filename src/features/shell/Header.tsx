@@ -3,6 +3,7 @@ import config from 'src/appConfig.json';
 
 import { useEffect, useState } from 'react';
 import { getTimeOfDate } from 'src/utils/time';
+import { Bus } from 'src/components/Icons';
 
 const Header = () => {
   const [clock, setClock] = useState(getTimeOfDate());
@@ -23,7 +24,7 @@ const Header = () => {
 
   return (
     <div className="headerWrapper">
-      <img src="bus.webp" alt="bus logo" onClick={openSettings} />
+      <Bus onClick={openSettings} />
       <h2 className="headerTitle">{config.title}</h2>
       <h2 className="headerClock">{clock}</h2>
     </div>

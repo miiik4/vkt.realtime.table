@@ -36,6 +36,7 @@ const Timetable = () => {
             <span>Destinasjon</span>
             <span>Destination</span>
           </th>
+          <th className="icon"></th>
           <th className="departure">
             <span>Avgang</span>
             <span>Departure</span>
