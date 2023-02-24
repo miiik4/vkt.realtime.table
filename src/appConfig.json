@@ -3,12 +3,12 @@
   "results": 10,
   "selected": [
     {
-      "stopCode": "7061043-01",
+      "stopCode": "NSR_QUAY_32303",
       "lineName": "01",
       "directionCode": "0"
     },
     {
-      "stopCode": "7060124",
+      "stopCode": "NSR_QUAY_33371",
       "lineName": "011",
       "directionCode": "0"
     }

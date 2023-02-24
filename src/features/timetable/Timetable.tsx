@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { DepartureDetails } from 'src/typings/stoptimes';
 import useTimetableApiHook from './api/times';
 import Timeslot from './components/Timeslot';
+import Loading from 'src/components/Loading';
 
 const Timetable = () => {
   const { getStopTimes } = useTimetableApiHook();
@@ -23,6 +24,8 @@ const Timetable = () => {
     }, config.updateInterval);
     return () => clearInterval(interval);
   }, []);
+
+  if (!timeslots.length) return <Loading />;
 
   return (
     <table className="timetable">
